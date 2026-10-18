@@ -1,0 +1,28 @@
+
+name: Lotto Weekly Update
+
+on:
+  schedule:
+    - cron: "30 13 * * 6"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-lotto:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check lotto data source
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.request
+
+          url = "https://smok95.github.io/lotto/results/all.json"
+          with urllib.request.urlopen(url, timeout=30) as response:
+              data = json.load(response)
+
+          print("로또 데이터 조회 성공")
+          print("데이터 건수:", len(data))
+          PY
