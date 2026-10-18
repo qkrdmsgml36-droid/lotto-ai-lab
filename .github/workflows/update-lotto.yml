@@ -1,34 +1,29 @@
-
 name: Lotto Weekly Update
-
 on:
   schedule:
-    - cron: "30 13 * * 6,0"
+    - cron: '30 13 * * 6'
+    - cron: '30 0 * * 0'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   check-lotto:
     runs-on: ubuntu-latest
     steps:
-    
       - uses: actions/checkout@v4
-      
-      - name: Check lotto data source
-        run: |
-          python - <<'PY'
-          import json
-          import urllib.request
-
-          url = "https://smok95.github.io/lotto/results/all.json"
-          with urllib.request.urlopen(url, timeout=30) as response:
-              data = json.load(response)
-
-          print("로또 데이터 조회 성공")
-          print("데이터 건수:", len(data))
-          PY
-
-      - name: Test lottery store source
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Update verified winning stores
         run: python scripts/update_stores.py
+      - name: Commit only verified changes
+        run: |
+          if [ -f lotto-stores.json ]; then
+            git add lotto-stores.json
+            if ! git diff --cached --quiet; then
+              git config user.name 'github-actions[bot]'
+              git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+              git commit -m 'Update verified lotto winning stores'
+              git push
+            fi
+          fi
