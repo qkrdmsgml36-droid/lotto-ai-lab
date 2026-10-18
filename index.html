@@ -248,3 +248,86 @@ $('shareAll').onclick=()=>{if(requireNumbers())shareNumbers(current)};$('emailAl
 </script>
 
 <script defer src="./lotto-stores-widget.js"></script>
+
+<script>
+(function () {
+  function showRegionStores() {
+    const buttons = document.getElementById("lottoRegionButtons");
+    const result = document.getElementById("lottoStoreExplorer");
+
+    if (!buttons || !result) return;
+
+    if (typeof verifiedLastResult === "undefined") {
+      result.textContent = "판매점 참고 자료를 불러올 수 없습니다.";
+      return;
+    }
+
+    const data = verifiedLastResult;
+    const regions = ["서울","경기","인천","부산","대구",
+      "광주","대전","울산","세종","강원","충북",
+      "충남","전북","전남","경북","경남","제주"];
+
+    function render(region) {
+      const stores = data.shops.filter(shop => {
+        const address = shop[1] || "";
+        return region === "전체" ||
+          regions.some(name =>
+            name === region && address.startsWith(name)
+          );
+      });
+
+      result.replaceChildren();
+
+      const heading = document.createElement("h4");
+      heading.textContent =
+        `제${data.round}회 ${region} 당첨 판매점 참고 자료`;
+      result.appendChild(heading);
+
+      const notice = document.createElement("p");
+      notice.textContent =
+        "기존 사이트에 입력된 자료입니다. 공식 검증 전이며 자동 갱신 자료가 아닙니다.";
+      result.appendChild(notice);
+
+      if (!stores.length) {
+        const empty = document.createElement("p");
+        empty.textContent = "등록된 판매점 참고 자료가 없습니다.";
+        result.appendChild(empty);
+        return;
+      }
+
+      stores.forEach(shop => {
+        const item = document.createElement("div");
+        item.style.cssText =
+          "padding:12px 0;border-bottom:1px solid #ddd;";
+
+        const name = document.createElement("strong");
+        name.textContent = shop[0];
+
+        const address = document.createElement("p");
+        address.textContent = shop[1];
+
+        const method = document.createElement("small");
+        method.textContent = `구매 방식: ${shop[2] || "정보 없음"}`;
+
+        item.append(name, address, method);
+        result.appendChild(item);
+      });
+    }
+
+    buttons.addEventListener("click", event => {
+      const button = event.target.closest("button");
+      if (button && buttons.contains(button)) {
+        render(button.textContent.trim());
+      }
+    });
+
+    render("전체");
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", showRegionStores);
+  } else {
+    showRegionStores();
+  }
+})();
+</script>
