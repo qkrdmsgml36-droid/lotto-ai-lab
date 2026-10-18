@@ -1,0 +1,344 @@
+{
+  "source": "사용자 제공 회차별 당첨번호 엑셀",
+  "source_file": "로또 회차별 당첨번호_20261018232229.xlsx",
+  "updated_at": "2026-10-18",
+  "scope": "엑셀 수록 24회차만 포함. 전체 누적 통계 아님. 자동 업데이트 전 초기 자료.",
+  "draws": [
+    {
+      "round": 1246,
+      "numbers": [
+        16,
+        22,
+        23,
+        24,
+        27,
+        28
+      ],
+      "bonus": 6,
+      "first_prize_winners": 16,
+      "first_prize_amount_krw": 1881025430
+    },
+    {
+      "round": 1245,
+      "numbers": [
+        4,
+        5,
+        25,
+        28,
+        32,
+        42
+      ],
+      "bonus": 12,
+      "first_prize_winners": 10,
+      "first_prize_amount_krw": 3006515775
+    },
+    {
+      "round": 1244,
+      "numbers": [
+        1,
+        13,
+        18,
+        26,
+        34,
+        38
+      ],
+      "bonus": 25,
+      "first_prize_winners": 18,
+      "first_prize_amount_krw": 1604686625
+    },
+    {
+      "round": 1243,
+      "numbers": [
+        9,
+        18,
+        24,
+        38,
+        43,
+        44
+      ],
+      "bonus": 35,
+      "first_prize_winners": 12,
+      "first_prize_amount_krw": 2592525282
+    },
+    {
+      "round": 1242,
+      "numbers": [
+        2,
+        4,
+        10,
+        16,
+        31,
+        41
+      ],
+      "bonus": 9,
+      "first_prize_winners": 9,
+      "first_prize_amount_krw": 3281029250
+    },
+    {
+      "round": 1241,
+      "numbers": [
+        7,
+        13,
+        16,
+        23,
+        24,
+        43
+      ],
+      "bonus": 9,
+      "first_prize_winners": 18,
+      "first_prize_amount_krw": 1628391980
+    },
+    {
+      "round": 1240,
+      "numbers": [
+        11,
+        13,
+        19,
+        20,
+        31,
+        44
+      ],
+      "bonus": 27,
+      "first_prize_winners": 16,
+      "first_prize_amount_krw": 1791817758
+    },
+    {
+      "round": 1239,
+      "numbers": [
+        11,
+        13,
+        22,
+        32,
+        33,
+        36
+      ],
+      "bonus": 8,
+      "first_prize_winners": 13,
+      "first_prize_amount_krw": 2214789375
+    },
+    {
+      "round": 1238,
+      "numbers": [
+        2,
+        13,
+        18,
+        32,
+        38,
+        42
+      ],
+      "bonus": 22,
+      "first_prize_winners": 23,
+      "first_prize_amount_krw": 1197258718
+    },
+    {
+      "round": 1237,
+      "numbers": [
+        10,
+        20,
+        23,
+        34,
+        37,
+        40
+      ],
+      "bonus": 36,
+      "first_prize_winners": 23,
+      "first_prize_amount_krw": 1214932680
+    },
+    {
+      "round": 1236,
+      "numbers": [
+        12,
+        18,
+        21,
+        29,
+        34,
+        38
+      ],
+      "bonus": 10,
+      "first_prize_winners": 11,
+      "first_prize_amount_krw": 2441919375
+    },
+    {
+      "round": 1235,
+      "numbers": [
+        6,
+        7,
+        11,
+        15,
+        39,
+        43
+      ],
+      "bonus": 20,
+      "first_prize_winners": 9,
+      "first_prize_amount_krw": 3090961625
+    },
+    {
+      "round": 1234,
+      "numbers": [
+        1,
+        15,
+        19,
+        31,
+        35,
+        43
+      ],
+      "bonus": 27,
+      "first_prize_winners": 18,
+      "first_prize_amount_krw": 1595129563
+    },
+    {
+      "round": 1233,
+      "numbers": [
+        2,
+        7,
+        20,
+        25,
+        37,
+        40
+      ],
+      "bonus": 29,
+      "first_prize_winners": 31,
+      "first_prize_amount_krw": 837965396
+    },
+    {
+      "round": 1232,
+      "numbers": [
+        12,
+        15,
+        19,
+        22,
+        24,
+        36
+      ],
+      "bonus": 3,
+      "first_prize_winners": 11,
+      "first_prize_amount_krw": 2533260819
+    },
+    {
+      "round": 1231,
+      "numbers": [
+        4,
+        13,
+        14,
+        18,
+        31,
+        38
+      ],
+      "bonus": 15,
+      "first_prize_winners": 17,
+      "first_prize_amount_krw": 1652990074
+    },
+    {
+      "round": 1230,
+      "numbers": [
+        3,
+        8,
+        9,
+        22,
+        28,
+        42
+      ],
+      "bonus": 45,
+      "first_prize_winners": 16,
+      "first_prize_amount_krw": 1771357196
+    },
+    {
+      "round": 1229,
+      "numbers": [
+        12,
+        13,
+        29,
+        34,
+        37,
+        42
+      ],
+      "bonus": 16,
+      "first_prize_winners": 8,
+      "first_prize_amount_krw": 3519759000
+    },
+    {
+      "round": 1228,
+      "numbers": [
+        24,
+        29,
+        30,
+        31,
+        35,
+        44
+      ],
+      "bonus": 1,
+      "first_prize_winners": 11,
+      "first_prize_amount_krw": 2698334421
+    },
+    {
+      "round": 1227,
+      "numbers": [
+        1,
+        14,
+        16,
+        34,
+        41,
+        44
+      ],
+      "bonus": 13,
+      "first_prize_winners": 11,
+      "first_prize_amount_krw": 2674808455
+    },
+    {
+      "round": 1226,
+      "numbers": [
+        4,
+        6,
+        13,
+        17,
+        26,
+        28
+      ],
+      "bonus": 41,
+      "first_prize_winners": 10,
+      "first_prize_amount_krw": 2815230113
+    },
+    {
+      "round": 1225,
+      "numbers": [
+        8,
+        9,
+        19,
+        25,
+        41,
+        42
+      ],
+      "bonus": 33,
+      "first_prize_winners": 13,
+      "first_prize_amount_krw": 2228133087
+    },
+    {
+      "round": 1224,
+      "numbers": [
+        9,
+        18,
+        21,
+        27,
+        44,
+        45
+      ],
+      "bonus": 28,
+      "first_prize_winners": 12,
+      "first_prize_amount_krw": 2414855250
+    },
+    {
+      "round": 1223,
+      "numbers": [
+        16,
+        18,
+        20,
+        32,
+        33,
+        39
+      ],
+      "bonus": 26,
+      "first_prize_winners": 16,
+      "first_prize_amount_krw": 1857554133
+    }
+  ]
+}
