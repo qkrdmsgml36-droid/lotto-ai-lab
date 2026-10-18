@@ -1,0 +1,29 @@
+name: 로또 당첨번호 자동 갱신
+on:
+  workflow_dispatch:
+  schedule:
+    # 매주 일요일 오전 9시 KST (토요일 00:00 UTC)
+    - cron: '0 0 * * 0'
+permissions:
+  contents: write
+jobs:
+  update-draws:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 공개 당첨번호 확인 및 JSON 갱신
+        run: python scripts/update_draws.py
+      - name: 변경된 파일만 저장
+        run: |
+          if git diff --quiet -- lotto-results.json; then
+            echo '새 회차 없음 또는 데이터 접근 실패 — 변경 없음'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add lotto-results.json
+          git commit -m '자동 갱신: 검증된 로또 당첨번호'
+          git push
