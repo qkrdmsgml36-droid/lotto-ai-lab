@@ -26,3 +26,6 @@ jobs:
           print("로또 데이터 조회 성공")
           print("데이터 건수:", len(data))
           PY
+
+      - name: Test lottery store source
+        run: python scripts/update_stores.py
